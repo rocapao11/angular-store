@@ -1,5 +1,5 @@
 import { Component, inject, Input, signal, SimpleChanges } from '@angular/core';
-import { Product } from '../../models/product.model';
+// import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 
