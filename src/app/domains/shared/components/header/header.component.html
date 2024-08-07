@@ -1,6 +1,6 @@
 <nav>
   <div
-    class="w-full flex flex-wrap items-center justify-between mx-auto py-6"
+    class="container w-full flex flex-wrap items-center justify-between mx-auto mt-8 py-6"
   >
     <div class="flex items-center space-x-8">
       <a href="https://flowbite.com/" class="flex items-center ">
@@ -16,22 +16,22 @@
       <ul class="flex space-x-6">
         <li>
           <a
-            href="#"
-            class="block underline hover:underline"
+          routerLink="/"
+            class="block hover:underline"
             aria-current="page"
             >Home</a
           >
         </li>
         <li>
           <a
-            href="#"
+            routerLink="/about"
             class="block hover:underline"
             >About</a
           >
         </li>
         <li>
           <a
-            href="#"
+          routerLink="/services"
             class="block hover:underline"
             >Services</a
           >
@@ -88,11 +88,11 @@
       <img class="w-12 rounded" [src]="product.images[0]">
       <div class="flex flex-col flex-grow ml-4">
         <p>{{ product.title }}</p>
-        <p class="mt-2 text-right">$ {{ product.price }}</p>
+        <p class="mt-2 text-right">$ {{ product.price | currency }}</p>
         <hr class=" mt-5"/>
       </div>
     </div>
-    <p class="my-5 text-right">Total = $ {{ total() }}</p>
+    <p class="my-5 text-right font-bold">Total = $ {{ total() | currency }}</p>
     <hr/>
   </div>
 </div>
